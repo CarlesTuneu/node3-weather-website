@@ -12,10 +12,18 @@ const forecast = (latitude, longitude, callback) => {
             callback('Check your coordinates', undefined)
         } else {
             //console.log(body.currently)
-            callback(undefined, 'It is currently ' + body.currently.temperature + ' degrees out. There is ' + body.currently.precipProbability + '% chance of rain.')
+            callback(undefined, 'It is currently ' + body.currently.temperature + ' degrees out. There is ' + body.currently.precipProbability + '% chance of '+ body.currently.precipType + '!')
             // callback(undefined, body.daily.data[0].summary)
         }
     })
 }
 
 module.exports = forecast
+
+//
+// Goal: Add new data to forecast
+//
+// 1. Update the forecaste string inlcude new data
+// 2. Commit your changes
+// 3. Push your changes to GitHub and deploy to Heroku
+// 4. Test your work in the live application!
