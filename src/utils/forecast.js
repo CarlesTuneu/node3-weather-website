@@ -12,7 +12,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Check your coordinates', undefined)
         } else {
             //console.log(body.currently)
-            callback(undefined, 'It is currently ' + body.currently.temperature + ' degrees out. There is ' + body.currently.precipProbability + '% chance of '+ body.currently.precipType + '!')
+            callback(undefined, 'It is currently ' + body.currently.temperature + ' degrees out. There is ' + body.currently.precipProbability + '% chance of rain and '+ body.currently.humidity + '% of humidity!')
             // callback(undefined, body.daily.data[0].summary)
         }
     })
